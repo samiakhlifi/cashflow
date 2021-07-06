@@ -1,0 +1,47 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Create Cashflow</h3>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div class="form-group">
+            <label> Resultat Net </label>
+            <input type="number" class ="form-control" id = "resultatNet"
+                [(ngModel)] = "cashflow.resultatNet" name = "resultatNet">
+        </div>
+    
+        <div class="form-group">
+            <label> Dotations Nettes Aux Provisions  </label>
+            <input type="number" class ="form-control" id = "dotationsnettesProvisions"
+                [(ngModel)] = "cashflow.dotationsnettesProvisions" name = "dotationsnettesProvisions">
+        </div>
+    
+        <div class="form-group">
+            <label> Plus-Values De Cession D'actifs </label>
+            <input type="number" class ="form-control" id = "plusaluesCession"
+                [(ngModel)] = "cashflow.plusaluesCession" name = "plusaluesCession">
+        </div>
+    
+        <div class="form-group">
+            <label>Moins-Values De Cession D'actifs </label>
+            <input type="number" class ="form-control" id = "moinsvaluesCession"
+                [(ngModel)] = "cashflow.moinsvaluesCession" name = "moinsvaluesCession">
+        </div>
+        <div class="form-group">
+            <label>Variation Du Besoin En Fonds De Roulement</label>
+            <input type="number" class ="form-control" id = "variationRoulement"
+                [(ngModel)] = "cashflow.variationRoulement" name = "variationRoulement">
+        </div>
+
+
+        <button class = "btn btn-success" type ="submit">Calculer cashFlow</button>
+    
+    </form>
+
+    <div class="form-group">
+        <label> cashflow</label>
+        <span type="number" class ="form-control" id = "cashFlow"
+      name = "cashFlow"> {{cashflow.cashFlow}}</span>
+    </div>
+
+
+    </div> 
+  
